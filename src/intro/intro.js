@@ -4,7 +4,7 @@ JSX
 > memungkinkan tag html di fle js
 > untuk mencetak variable menggunakan kurawal (curly braces), termasuk function.
 */
-import "./index.css";
+import "../index.css";
 import styles from "./styles.module.css";
 
 const helloStyle = {
