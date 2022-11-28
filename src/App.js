@@ -1,59 +1,74 @@
+import { Row, Col, Container } from "react-bootstrap";
 import "./App.css";
-import { Hello, HelloClass } from "./intro/Hello";
-import { Col, Container, Row } from "react-bootstrap";
-import CetakTable from "./intro/CetakTable";
-import People from "./intro/people";
+import LockerPage from "./Homework/LockerPage";
+// import { Hello, HelloClass } from "./intro/Hello";
+// import CetakTable from "./intro/CetakTable";
+import People from "./intro/People";
+import PeopleView from "./intro/PeopleView";
+import LatihanPage from "./latihan/LatihanPage";
 
 function App() {
-  let name = "suhendra";
-  let mobil = {
-    brand: "toyota",
-    name: "rush",
-  };
-  let greet = () => {
-    const word = "Terimakasih";
-    return word;
-  };
+  // let name = "suhendra";
+  // let mobil = {
+  //   brand: "toyota",
+  //   name: "rush",
+  // };
+  // let greet = () => {
+  //   const word = "Terimakasih";
+  //   return word;
+  // };
 
-  function CobaCetak() {
-    return (
-      <div>
-        <p>Coba Cetak</p>;
-      </div>
-    );
-  }
+  // function CobaCetak() {
+  //   return (
+  //     <div>
+  //       <p>Coba Cetak</p>;
+  //     </div>
+  //   );
+  // }
 
   // let mobil2 = { ...mobil };
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <Hello
-            name={name}
-            job={"Aktor"}
-            greet={greet}
-            gender={"Male"}
-            mobil={{ ...mobil }}
-          />
-        </Col>
-        <Col>
-          <HelloClass
-            Hello={Hello}
-            helloCoba={CobaCetak}
-            mobil={mobil}
-            greet={greet}
-          >
-            <CobaCetak />
-          </HelloClass>
-        </Col>
-        <Col>
-          <CetakTable />
-        </Col>
+    // <Container fluid>
+    //   <Row>
+    //     <Col>
+    //       <Hello
+    //         name={name}
+    //         job={"Aktor"}
+    //         greet={greet}
+    //         gender={"Male"}
+    //         mobil={{ ...mobil }}
+    //       />
+    //     </Col>
+    //     <Col>
+    //       <HelloClass
+    //         Hello={Hello}
+    //         helloCoba={CobaCetak}
+    //         mobil={mobil}
+    //         greet={greet}
+    //       >
+    //         <CobaCetak />
+    //       </HelloClass>
+    //     </Col>
+    //     <Col>
+    //       <CetakTable />
+    //     </Col>
+    //     <Row>
+    //       <People />
+    //     </Row>
+    //   </Row>
+    // </Container>
+    <>
+      <Container fluid>
         <Row>
-          <People />
+          <Col>
+            {/* <People /> */}
+            {/* <PeopleView /> */}
+            {/* <LatihanPage increment={7} decrement={3} /> */}
+            <LockerPage />
+          </Col>
         </Row>
-      </Row>
-    </Container>
+      </Container>
+    </>
   );
 }
 
