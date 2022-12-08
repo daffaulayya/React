@@ -1,0 +1,13 @@
+Apa itu render props
+
+What is Render props?
+1. Sebuah teknik yg berguna untuk berbagi code ataua state ke 1 atau lebih komponen lain yg memerlukan
+2. Memanfaatkan props.children untuk mengirimkan/sharing core atau state ke komponen yg memerlukan.
+3. props.children akan dipanggil sebagai function di dalam komponen yg bertugas sebagai state managernya.
+4. state yg disediakan melalui render props, bersifat shared, dalam artian berbagi dengan sesama komponen yang menggunakannya selama ada didalam scope y sama atau menjadi keturunan langsungnya.
+5. Komponen yg menggunakan data atau state dari render props, disebut dengan consumer.
+6. render props, dapat memiliki lebih dari satu consumer dalam 1 kali pemanggilan
+
+Context terdiri dari 2 component utama 
+- Provider : HoC, Render Props
+- Consumer : 

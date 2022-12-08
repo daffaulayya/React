@@ -70,25 +70,22 @@ export default class LockerPage extends Component {
         >
           Locker
         </h1>
-        <Button
-          style={{
-            backgroundColor: "#000000",
-            color: "white",
-          }}
-          onClick={() => this.addLocker(false)}
-        >
-          Add Locker
-        </Button>
-        <Button
-          style={{
-            backgroundColor: "#FCB700",
-            margin: "10px",
-            color: "black",
-          }}
-          onClick={() => this.addLocker(true)}
-        >
-          Add Locked Locker
-        </Button>
+        <Col>
+          <Button
+            className="px-3 me-2"
+            variant="dark"
+            onClick={() => this.addLocker(false)}
+          >
+            Add Locker
+          </Button>
+          <Button
+            className="px-3 me-2"
+            variant="warning"
+            onClick={() => this.addLocker(true)}
+          >
+            Add Locked Locker
+          </Button>
+        </Col>
 
         <Row md="3" sm="2">
           {this.state.lockers.map((objLockers, idx) => {

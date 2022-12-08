@@ -14,7 +14,7 @@ export default function LockerSlot(props) {
               textAlign: "left",
               fontSize: "20px",
             }}
-            className="d-flex justify-content-between"
+            className="d-flex justify-content-between align-items-center"
           >
             Locker {props.idx + 1}
             <Button
@@ -22,7 +22,7 @@ export default function LockerSlot(props) {
               disabled={props.shoes > 0 ? true : false}
               onClick={() => props.hapus(props.idx)}
             >
-              X
+              &times;
             </Button>
           </div>
         </Card.Header>

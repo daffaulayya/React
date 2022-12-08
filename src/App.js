@@ -6,6 +6,11 @@ import LockerPage from "./Homework/LockerPage";
 import People from "./intro/People";
 import PeopleView from "./intro/PeopleView";
 import LatihanPage from "./latihan/LatihanPage";
+import GuestBookPage from "./guest-book/GuestBookPage";
+import LoginPage from "./Website/LoginPage";
+import Dashboard from "./Website/DashboardPage";
+import UncontrolledPage from "./Website/UncontrolledPage";
+import CounterPage from "./counter-context/CounterPage";
 
 function App() {
   // let name = "suhendra";
@@ -64,7 +69,12 @@ function App() {
             {/* <People /> */}
             {/* <PeopleView /> */}
             {/* <LatihanPage increment={7} decrement={3} /> */}
-            <LockerPage />
+            {/* <LockerPage /> */}
+            {/* <GuestBookPage /> */}
+            {/* <LoginPage /> */}
+            {/* <Dashboard /> */}
+            {/* <UncontrolledPage /> */}
+            <CounterPage />
           </Col>
         </Row>
       </Container>
