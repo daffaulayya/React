@@ -13,6 +13,7 @@ import UncontrolledPage from "./Website/UncontrolledPage";
 import CounterPage from "./counter-context/CounterPage";
 import ShoeRentalPage from "./shoe-rental fn/ShoeRentalPage";
 import CounterReducerPage from "./counter-reducer/CounterReducerPage";
+import StateSamplePage from "./state/StateSamplePage";
 function App() {
   // let name = "suhendra";
   // let mobil = {
@@ -78,7 +79,8 @@ function App() {
             {/* <CounterPage /> */}
             {/* <ShoeRentalPage /> */}
             {/* <ShoeRentalPage /> */}
-            <CounterReducerPage />
+            {/* <CounterReducerPage /> */}
+            <StateSamplePage />
           </Col>
         </Row>
       </Container>
