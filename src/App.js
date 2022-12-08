@@ -11,7 +11,8 @@ import LoginPage from "./Website/LoginPage";
 import Dashboard from "./Website/DashboardPage";
 import UncontrolledPage from "./Website/UncontrolledPage";
 import CounterPage from "./counter-context/CounterPage";
-
+import ShoeRentalPage from "./shoe-rental fn/ShoeRentalPage";
+import CounterReducerPage from "./counter-reducer/CounterReducerPage";
 function App() {
   // let name = "suhendra";
   // let mobil = {
@@ -74,7 +75,10 @@ function App() {
             {/* <LoginPage /> */}
             {/* <Dashboard /> */}
             {/* <UncontrolledPage /> */}
-            <CounterPage />
+            {/* <CounterPage /> */}
+            {/* <ShoeRentalPage /> */}
+            {/* <ShoeRentalPage /> */}
+            <CounterReducerPage />
           </Col>
         </Row>
       </Container>
