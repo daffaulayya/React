@@ -14,6 +14,14 @@ import CounterPage from "./counter-context/CounterPage";
 import ShoeRentalPage from "./shoe-rental fn/ShoeRentalPage";
 import CounterReducerPage from "./counter-reducer/CounterReducerPage";
 import StateSamplePage from "./state/StateSamplePage";
+import CounterReduxPage from "./counter-redux-1/CounterReduxPage";
+import { Provider } from "react-redux";
+import { counterStore } from "./counter-redux/Counter-Store";
+import CounterSlicePage from "./counter-redux-toolkit/CounterSlicePage";
+import GuestBookSlicePage from "./guest-book-redux/GuestBookSlicePage";
+import GuestBook from "./GuestBookExample/GuestBook";
+import MainStore from "./store";
+
 function App() {
   // let name = "suhendra";
   // let mobil = {
@@ -80,7 +88,15 @@ function App() {
             {/* <ShoeRentalPage /> */}
             {/* <ShoeRentalPage /> */}
             {/* <CounterReducerPage /> */}
-            <StateSamplePage />
+            {/* <StateSamplePage /> */}
+            {/* <Provider store={counterStore}>
+              <CounterReduxPage />
+            </Provider> */}
+            {/* <CounterSlicePage /> */}
+            {/* <GuestBookSlicePage /> */}
+            <Provider store={MainStore}>
+              <GuestBook />
+            </Provider>
           </Col>
         </Row>
       </Container>
