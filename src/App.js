@@ -21,6 +21,8 @@ import CounterSlicePage from "./counter-redux-toolkit/CounterSlicePage";
 import GuestBookSlicePage from "./guest-book-redux/GuestBookSlicePage";
 import GuestBook from "./GuestBookExample/GuestBook";
 import MainStore from "./store";
+import Header from "./layout/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   // let name = "suhendra";
@@ -73,33 +75,30 @@ function App() {
     //   </Row>
     // </Container>
     <>
-      <Container fluid>
-        <Row>
-          <Col>
-            {/* <People /> */}
-            {/* <PeopleView /> */}
-            {/* <LatihanPage increment={7} decrement={3} /> */}
-            {/* <LockerPage /> */}
-            {/* <GuestBookPage /> */}
-            {/* <LoginPage /> */}
-            {/* <Dashboard /> */}
-            {/* <UncontrolledPage /> */}
-            {/* <CounterPage /> */}
-            {/* <ShoeRentalPage /> */}
-            {/* <ShoeRentalPage /> */}
-            {/* <CounterReducerPage /> */}
-            {/* <StateSamplePage /> */}
-            {/* <Provider store={counterStore}>
+      {/* <People /> */}
+      {/* <PeopleView /> */}
+      {/* <LatihanPage increment={7} decrement={3} /> */}
+      {/* <LockerPage /> */}
+      {/* <GuestBookPage /> */}
+      {/* <LoginPage /> */}
+      {/* <Dashboard /> */}
+      {/* <UncontrolledPage /> */}
+      {/* <CounterPage /> */}
+      {/* <ShoeRentalPage /> */}
+      {/* <ShoeRentalPage /> */}
+      {/* <CounterReducerPage /> */}
+      {/* <StateSamplePage /> */}
+      {/* <Provider store={counterStore}>
               <CounterReduxPage />
             </Provider> */}
-            {/* <CounterSlicePage /> */}
-            {/* <GuestBookSlicePage /> */}
-            <Provider store={MainStore}>
-              <GuestBook />
-            </Provider>
-          </Col>
-        </Row>
-      </Container>
+      {/* <CounterSlicePage /> */}
+      {/* <GuestBookSlicePage /> */}
+      <Header />
+      <Provider store={MainStore}>
+        <Container fluid>
+          <Outlet />
+        </Container>
+      </Provider>
     </>
   );
 }

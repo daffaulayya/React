@@ -3,16 +3,21 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import Web from "./Website/Web";
+import routes from "./routes";
 
 import reportWebVitals from "./reportWebVitals";
+import { RouterProvider } from "react-router-dom";
+import AppRouted from "./AppRouted";
 // import { Hello } from "./intro/Hello";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <Hello /> */}
     {/* <Web /> */}
+    {/* <RouterProvider router={routes} /> */}
+    <AppRouted />
   </React.StrictMode>
 );
 

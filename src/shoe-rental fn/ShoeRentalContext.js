@@ -1,3 +1,4 @@
+import { nanoid } from "@reduxjs/toolkit";
 import { createContext, useState } from "react";
 import { Transaction } from "./ShoeRentalForm";
 
@@ -7,29 +8,26 @@ const { Provider, Consumer: ShoeRentalConsumer } = ShoeRentalContext;
 function ShoeRentalProvider(props) {
   const [filter, setFilter] = useState(undefined);
   const [transactionId, setTransactionId] = useState(undefined);
-  const [transactions, setTransaction] = useState([
-    new Transaction("Nike 1", "John", 1, 1),
-    new Transaction("Nike 2", "Jane", 2, 1),
-    new Transaction("Nike 3", "James", 3, 1),
-  ]);
+  const [transactions, setTransaction] = useState([]);
 
   const saveTransaction = (transaction) => {
-    if (transactionId) {
+    if (transaction.id) {
       setTransaction(undefined);
       setTransaction(
         transactions.map((trx) => {
-          if (trx.id === transactionId) {
+          if (trx.id === transaction.id) {
             trx = { ...transaction };
           }
           return trx;
         })
       );
     } else {
+      transaction.id = nanoid();
       setTransaction([...transactions, transaction]);
     }
   };
 
-  const getTransaction = () => {
+  const getTransaction = (transactionId) => {
     if (transactionId) {
       return transactions.find((trx) => trx.id === transactionId);
     }

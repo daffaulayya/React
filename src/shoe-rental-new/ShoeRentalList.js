@@ -1,25 +1,28 @@
 import { useContext } from "react";
 import { Button, Card, Col, Form, Row, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ShoeRentalContext from "./ShoeRentalContext";
-import { TransactionStatus } from "./ShoeRentalForm";
+import { TransactionStatus } from "./ShoeRentalFormFn";
 
 export default function ShoeRentalList(props) {
   const rentalContextValue = useContext(ShoeRentalContext);
-  const { filter, setFilter, selectTransaction } = rentalContextValue;
-  const { openForm } = props;
+  const {
+    filter,
+    setFilter,
+    setTransaction: selectTransaction,
+  } = rentalContextValue;
   let { transactions } = rentalContextValue;
 
-  if (filter) {
-    transactions = transactions.filter(
-      (trx) => filter && trx.status === filter
-    );
+  if (filter.status) {
+    transactions = transactions.filter((trx) => trx.status === filter.status);
   }
 
   return (
     <Card>
       <Card.Header className="d-flex justify-content-between align-items-center">
-        <Card.Title as="h2">Shoe Rental Transactions</Card.Title>
+        <Card.Title as="h2" className="fs-5">
+          Shoe Rental Transactions
+        </Card.Title>
         <Button as={Link} size="sm" to="form">
           Rent Shoes
         </Button>
@@ -74,15 +77,11 @@ export default function ShoeRentalList(props) {
                   <td>{trx.condition || "-"}</td>
                   <td>{trx.status}</td>
                   <td>
-                    {trx.status !== TransactionStatus.BORROWED ? (
+                    {trx.status === TransactionStatus.BORROWED ? (
                       <Button
                         as={Link}
                         variant="warning"
                         size="sm"
-                        // onClick={() => {
-                        //   selectTransaction(trx.id);
-                        //   openForm();
-                        // }}
                         to={`form/${trx.id}`}
                       >
                         Return Shoes
