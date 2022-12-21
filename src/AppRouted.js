@@ -34,10 +34,9 @@ export default function AppRouted() {
                 <Route path="form" element={<ShoeRentalFormFn />} />
                 <Route path="form/:id" element={<ShoeRentalFormFn />} />
               </Route>
+              <Route path="counter" element={<CounterSlicePage />} />
+              <Route path="locker" element={<LockerPage />} />
             </Route>
-
-            <Route path="counter" element={<CounterSlicePage />} />
-            <Route path="locker" element={<LockerPage />} />
 
             <Route path="login" element={<>Login</>} />
           </Routes>
